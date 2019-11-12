@@ -17,7 +17,7 @@ public class PushCounter extends Application
     @Override
     public void start(Stage stage)
     {
-        count = 998;
+        count = 0;
         countText = new Text("Pushes: 0");
         
         Button push = new Button("Push Me!");
