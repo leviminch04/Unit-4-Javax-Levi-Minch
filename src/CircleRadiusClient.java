@@ -8,7 +8,7 @@ public class CircleRadiusClient extends Application {
     {
         Scene scene = new Scene(new CircleRadius(), 300, 300);
 
-        stage.setTitle("Circle Boi");
+        stage.setTitle("Circle Thing");
         stage.setScene(scene);
         stage.show();
     }

@@ -8,7 +8,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
-public class TwoChoices extends Application {
+public class TwoChoices extends Application
+{
     private int count;
     private Text countText;
 
