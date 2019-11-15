@@ -18,10 +18,10 @@ public class TwoChoices extends Application {
         count = 50;
         countText = new Text("Count: " + count);
 
-        Button pushDown = new Button("Increment down");
+        Button pushDown = new Button("Down");
         pushDown.setOnAction(this::processButtonPressDown);
 
-        Button pushUp = new Button("Increment up");
+        Button pushUp = new Button("Up");
         pushUp.setOnAction(this::processButtonPressUp);
 
         FlowPane pane = new FlowPane(pushDown, countText, pushUp);
