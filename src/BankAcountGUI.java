@@ -31,10 +31,18 @@ public class BankAcountGUI extends Application {
         Button day = new Button("add day");
         day.setOnAction(this::daysPress);
 
-        FlowPane buttons = new FlowPane(deposit, day);
+        Button withdraw = new Button("withdraw");
+        withdraw.setOnAction(this::withdrawPress);
+
+        FlowPane buttons = new FlowPane(deposit, day, withdraw);
         buttons.setAlignment(Pos.TOP_RIGHT);
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+
+        FlowPane createAccount = new FlowPane();
+        createAccount.setAlignment(Pos.TOP_LEFT);
+        createAccount.setHgap(20);
+        createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
 
         textWall.setFont(font);
@@ -52,14 +60,20 @@ public class BankAcountGUI extends Application {
 
     }
 
+    private void withdrawPress(javafx.event.ActionEvent actionEvent)
+    {
+        textWall.setText(textWall.getText() + "\n withdraw");
+
+    }
+
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n new text");
+        textWall.setText(textWall.getText() + "\n day");
     }
 
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n test");
+        textWall.setText(textWall.getText() + "\n deposit");
     }
 
 }
