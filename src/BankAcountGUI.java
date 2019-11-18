@@ -1,21 +1,16 @@
 
 import javafx.application.Application;
 import javafx.geometry.HPos;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import java.awt.*;
-import java.awt.event.ActionEvent;
+
 
 public class BankAcountGUI extends Application {
     public static void main(String[] args)
@@ -48,12 +43,11 @@ public class BankAcountGUI extends Application {
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
 
-        textWall.setFont(font);
         GridPane.setHalignment(textWall, HPos.LEFT);
 
         BorderPane root = new BorderPane();
         root.setTop(buttons);
-        root.setBottom(textWall);
+        root.setCenter(textWall);
 
         Scene scene = new Scene(root, 300, 300);
         stage.setTitle("ATM");
