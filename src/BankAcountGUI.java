@@ -100,13 +100,11 @@ public class BankAcountGUI extends Application {
     private void namePress(javafx.event.ActionEvent actionEvent)
     {
         name = nameText.getText();
-        textWall.setText(textWall.getText() + "\n " + name);
     }
 
     private void pinPress(javafx.event.ActionEvent actionEvent)
     {
         pin = pinText.getText();
-        textWall.setText(textWall.getText() + "\n " + pin);
     }
 
 }
