@@ -10,6 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import java.awt.*;
+import javafx.scene.layout.GridPane;
 
 
 public class BankAcountGUI extends Application {
@@ -18,6 +19,8 @@ public class BankAcountGUI extends Application {
         launch(args);
     }
     private TextArea textWall = new TextArea(" ");
+    private GridPane gridpane = new GridPane();
+
 
     @Override
     public void start(Stage stage) {
@@ -42,12 +45,6 @@ public class BankAcountGUI extends Application {
         createAccount.setHgap(20);
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
-
-        GridPane.setHalignment(textWall, HPos.LEFT);
-
-        BorderPane root = new BorderPane();
-        root.setTop(buttons);
-        root.setCenter(textWall);
 
         Scene scene = new Scene(root, 300, 300);
         stage.setTitle("ATM");
