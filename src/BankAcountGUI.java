@@ -57,6 +57,16 @@ public class BankAcountGUI extends Application {
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
+        Label withdrawRequest = new Label("How much do you want to withdraw? ");
+        Label depositRequest = new Label("How much do you want to deposit? ");
+        TextField withdrawAmount = new TextField();
+        TextField depositAmount = new TextField();
+        GridPane withdrawDeposit = new GridPane();
+        withdrawDeposit.add(withdrawRequest, 0, 1);
+        withdrawDeposit.add(withdrawAmount, 1, 1);
+        withdrawDeposit.add(depositRequest, 0, 0);
+        withdrawDeposit.add(depositAmount, 1,0);
+
         Label nameLabel = new Label("Account Name ");
         Label pinLabel = new Label("Pin ");
 
@@ -72,6 +82,7 @@ public class BankAcountGUI extends Application {
         gridpane.add(textWall, 0, 1);
         gridpane.add(buttons, 1, 0);
         gridpane.add(createAccount, 0, 0);
+        gridpane.add(withdrawDeposit, 1, 1);
 
 
         Scene scene = new Scene(gridpane, 650, 500);
