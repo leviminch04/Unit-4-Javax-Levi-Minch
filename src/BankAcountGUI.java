@@ -23,10 +23,12 @@ public class BankAcountGUI extends Application {
     private GridPane gridpane = new GridPane();
     private TextField pinText;
     private TextField nameText;
-    private int balance = 0;
+    private double balence = 0;
+    private int days = 0;
     private double interest = 0.039;
     private String name;
     private String pin;
+    private String saftyPin;
 
     @Override
     public void start(Stage stage) {
@@ -51,6 +53,8 @@ public class BankAcountGUI extends Application {
         GridPane pinAccess = new GridPane();
         pinAccess.add(pinAccessorLabel, 0 ,0);
         pinAccess.add(pinAccessor, 1, 0);
+        pinAccessor.setOnAction(this::pinAccessorPress);
+
 
         FlowPane buttons = new FlowPane(deposit, day, withdraw, pinAccess);
         buttons.setAlignment(Pos.TOP_RIGHT);
@@ -90,6 +94,9 @@ public class BankAcountGUI extends Application {
 
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
+        if ()
+        days++;
+        balence = (balence)*(interest)*(days);
         textWall.setText(textWall.getText() + "\n day");
     }
 
@@ -105,6 +112,10 @@ public class BankAcountGUI extends Application {
     private void pinPress(javafx.event.ActionEvent actionEvent)
     {
         pin = pinText.getText();
+    }
+    private void pinAccessorPress(javafx.event.ActionEvent actionEvent)
+    {
+        saftyPin = pinAccessor.getText();
     }
 
 }
