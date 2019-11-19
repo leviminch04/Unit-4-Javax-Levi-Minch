@@ -46,7 +46,7 @@ public class BankAcountGUI extends Application {
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
 
-        Scene scene = new Scene(root, 300, 300);
+        Scene scene = new Scene(gridpane, 300, 300);
         stage.setTitle("ATM");
         stage.setScene(scene);
         stage.show();
