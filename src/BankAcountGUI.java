@@ -4,14 +4,14 @@ import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import java.awt.*;
-import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+
 
 
 
@@ -22,12 +22,15 @@ public class BankAcountGUI extends Application {
     }
     private Label textWall = new Label(" ");
     private GridPane gridpane = new GridPane();
+    private TextField pin;
+    private TextField name;
 
 
     @Override
     public void start(Stage stage) {
         Font font = new Font(12);
-
+        name = new TextField();
+        pin = new TextField();
         Button deposit = new Button("Deposit");
         deposit.setOnAction(this::depositPress);
 
@@ -42,14 +45,16 @@ public class BankAcountGUI extends Application {
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
-        FlowPane createAccount = new FlowPane();
+
+
+        FlowPane createAccount = new FlowPane(name, pin);
         createAccount.setAlignment(Pos.TOP_LEFT);
-        createAccount.setHgap(20);
-        createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
         textWall.setFont(font);
         gridpane.add(textWall, 0, 1);
         gridpane.add(buttons, 1, 0);
+        gridpane.add(createAccount, 0, 0);
 
 
         Scene scene = new Scene(gridpane, 300, 300);
