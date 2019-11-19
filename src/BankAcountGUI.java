@@ -42,11 +42,11 @@ public class BankAcountGUI extends Application {
         TextField pinAccessor = new TextField();
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
-        GridPane pinShit = new GridPane();
-        pinShit.add(pinAccessorLabel, 0 ,0);
-        pinShit.add(pinAccessor, 1, 0);
+        GridPane pinAccess = new GridPane();
+        pinAccess.add(pinAccessorLabel, 0 ,0);
+        pinAccess.add(pinAccessor, 1, 0);
 
-        FlowPane buttons = new FlowPane(deposit, day, withdraw, pinShit);
+        FlowPane buttons = new FlowPane(deposit, day, withdraw, pinAccess);
         buttons.setAlignment(Pos.TOP_RIGHT);
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
