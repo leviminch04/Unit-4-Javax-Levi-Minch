@@ -1,6 +1,5 @@
 
 import javafx.application.Application;
-import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -45,11 +44,12 @@ public class BankAcountGUI extends Application {
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
+        Label nameLabel = new Label("Account Name ");
+        Label pinLabel = new Label("Pin ");
 
-
-        FlowPane createAccount = new FlowPane(name, pin);
+        FlowPane createAccount = new FlowPane(nameLabel, name, pinLabel, pin);
         createAccount.setAlignment(Pos.TOP_LEFT);
-        buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 
         textWall.setFont(font);
         gridpane.add(textWall, 0, 1);
@@ -57,7 +57,7 @@ public class BankAcountGUI extends Application {
         gridpane.add(createAccount, 0, 0);
 
 
-        Scene scene = new Scene(gridpane, 300, 300);
+        Scene scene = new Scene(gridpane, 500, 500);
         stage.setTitle("ATM");
         stage.setScene(scene);
         stage.show();
