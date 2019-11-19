@@ -21,15 +21,21 @@ public class BankAcountGUI extends Application {
     }
     private Label textWall = new Label(" ");
     private GridPane gridpane = new GridPane();
-    private TextField pin;
-    private TextField name;
-
+    private TextField pinText;
+    private TextField nameText;
+    private int balance = 0;
+    private double interest = 0.039;
+    private String name;
+    private String pin;
 
     @Override
     public void start(Stage stage) {
         Font font = new Font(12);
-        name = new TextField();
-        pin = new TextField();
+        nameText = new TextField();
+        nameText.setOnAction(this::namePress);
+        pinText = new TextField();
+        pinText.setOnAction(this::pinPress);
+
         Button deposit = new Button("Deposit");
         deposit.setOnAction(this::depositPress);
 
@@ -59,8 +65,8 @@ public class BankAcountGUI extends Application {
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
         createAccount.add(nameLabel, 0, 0);
         createAccount.add(pinLabel, 0, 1);
-        createAccount.add(name, 1, 0);
-        createAccount.add(pin, 1, 1);
+        createAccount.add(nameText, 1, 0);
+        createAccount.add(pinText, 1, 1);
 
         textWall.setFont(font);
         gridpane.add(textWall, 0, 1);
@@ -90,6 +96,15 @@ public class BankAcountGUI extends Application {
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
         textWall.setText(textWall.getText() + "\n deposit");
+    }
+    private void namePress(javafx.event.ActionEvent actionEvent)
+    {
+        name = nameText.getText();
+    }
+
+    private void pinPress(javafx.event.ActionEvent actionEvent)
+    {
+        pin = pinText.getText();
     }
 
 }
