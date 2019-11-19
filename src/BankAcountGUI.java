@@ -47,9 +47,13 @@ public class BankAcountGUI extends Application {
         Label nameLabel = new Label("Account Name ");
         Label pinLabel = new Label("Pin ");
 
-        FlowPane createAccount = new FlowPane(nameLabel, name, pinLabel, pin);
+        GridPane createAccount = new GridPane();
         createAccount.setAlignment(Pos.TOP_LEFT);
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        createAccount.add(nameLabel, 0, 0);
+        createAccount.add(pinLabel, 0, 1);
+        createAccount.add(name, 1, 0);
+        createAccount.add(pin, 1, 1);
 
         textWall.setFont(font);
         gridpane.add(textWall, 0, 1);
@@ -57,7 +61,7 @@ public class BankAcountGUI extends Application {
         gridpane.add(createAccount, 0, 0);
 
 
-        Scene scene = new Scene(gridpane, 500, 500);
+        Scene scene = new Scene(gridpane, 650, 500);
         stage.setTitle("ATM");
         stage.setScene(scene);
         stage.show();
