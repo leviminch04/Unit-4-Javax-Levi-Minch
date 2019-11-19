@@ -23,7 +23,8 @@ public class BankAcountGUI extends Application {
     private GridPane gridpane = new GridPane();
     private TextField pin;
     private TextField name;
-
+    private int balance = 0;
+    private double interest = 0.039;
 
     @Override
     public void start(Stage stage) {
