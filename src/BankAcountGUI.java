@@ -46,8 +46,10 @@ public class BankAcountGUI extends Application {
         createAccount.setAlignment(Pos.TOP_LEFT);
         createAccount.setHgap(20);
         createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
-        gridpane.add(textWall, 1, 0);
-        gridpane.add(buttons, 0, 0);
+
+        textWall.setFont(font);
+        gridpane.add(textWall, 0, 1);
+        gridpane.add(buttons, 1, 0);
 
 
         Scene scene = new Scene(gridpane, 300, 300);
