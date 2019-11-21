@@ -58,6 +58,9 @@ public class BankAcountGUI extends Application {
         Button clear = new Button("Clear");
         clear.setOnAction(this::clearPress);
 
+        Button info = new Button("info");
+        info.setOnAction(this::infoPress);
+
 
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
@@ -65,7 +68,7 @@ public class BankAcountGUI extends Application {
         pinAccess.add(pinAccessorLabel, 0 ,0);
         pinAccess.add(pinAccessor, 1, 0);
 
-        FlowPane buttons = new FlowPane(deposit, day, withdraw, clear);
+        FlowPane buttons = new FlowPane(info, clear, deposit, day, withdraw);
         buttons.setAlignment(Pos.TOP_RIGHT);
         buttons.setHgap(10);
         buttons.setStyle("-fx-background-color: DIMGREY");
@@ -163,4 +166,11 @@ public class BankAcountGUI extends Application {
         }
     }
 
+    private void infoPress(javafx.event.ActionEvent actionEvent)
+    {
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + name + "\n" + balance + "\n");
+        }
+    }
 }
