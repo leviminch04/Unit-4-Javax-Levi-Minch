@@ -23,9 +23,13 @@ public class BankAcountGUI extends Application {
     private GridPane gridpane = new GridPane();
     private TextField pinText;
     private TextField nameText;
+    private TextField withdrawAmount = new TextField();
+    private TextField depositAmount = new TextField();
+    private GridPane withdrawDeposit = new GridPane();
     private double balence = 0;
     private int days = 0;
     private double interest = 0.039;
+    private double chosenDeposit;
     private String name;
     private String pin;
     private String saftyPin;
@@ -66,9 +70,6 @@ public class BankAcountGUI extends Application {
 
         Label withdrawRequest = new Label("How much do you want to withdraw? ");
         Label depositRequest = new Label("How much do you want to deposit? ");
-        TextField withdrawAmount = new TextField();
-        TextField depositAmount = new TextField();
-        GridPane withdrawDeposit = new GridPane();
         withdrawDeposit.setStyle("-fx-background-color: LIGHTSTEELBLUE");
         withdrawDeposit.add(withdrawRequest, 0, 2);
         withdrawDeposit.add(withdrawAmount, 1, 2);
@@ -111,7 +112,7 @@ public class BankAcountGUI extends Application {
 
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
-        if ()
+        //  if (pin)
         days++;
         balence = (balence)*(interest)*(days);
         textWall.setText(textWall.getText() + "\n day");
@@ -119,7 +120,10 @@ public class BankAcountGUI extends Application {
 
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n deposit");
+        String stringDeposit = new String(depositAmount.toString());
+        chosenDeposit = Double.parseDouble(stringDeposit);
+        balence += chosenDeposit;
+        textWall.setText(textWall.getText() + "\n " + balence);
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
     {
@@ -132,7 +136,7 @@ public class BankAcountGUI extends Application {
     }
     private void pinAccessorPress(javafx.event.ActionEvent actionEvent)
     {
-        saftyPin = pinAccessor.getText();
+        //   saftyPin = pinAccessor.getText();
     }
 
     private void clearPress(javafx.event.ActionEvent actionEvent )
