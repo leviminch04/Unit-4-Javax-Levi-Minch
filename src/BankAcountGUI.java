@@ -132,7 +132,6 @@ public class BankAcountGUI extends Application {
             chosenDeposit = Double.parseDouble(stringDeposit);
             balance += chosenDeposit;
             textWall.setText(textWall.getText() + "\n " + balance);
-
         }
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
