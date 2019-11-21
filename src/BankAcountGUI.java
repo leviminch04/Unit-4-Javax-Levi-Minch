@@ -26,9 +26,13 @@ public class BankAcountGUI extends Application {
     private GridPane gridpane = new GridPane();
     private TextField pinText;
     private TextField nameText;
+    private double chosenDeposit;
     private int balance = 0;
     private double interest = 0.039;
-    TextField pinAccessor = new TextField();
+    private TextField withdrawAmount = new TextField();
+    private TextField depositAmount = new TextField();
+    private GridPane withdrawDeposit = new GridPane();
+    private TextField pinAccessor = new TextField();
     private String name;
     private String pin;
     private boolean runSafe = false;
@@ -68,9 +72,6 @@ public class BankAcountGUI extends Application {
 
         Label withdrawRequest = new Label("How much do you want to withdraw? ");
         Label depositRequest = new Label("How much do you want to deposit? ");
-        TextField withdrawAmount = new TextField();
-        TextField depositAmount = new TextField();
-        GridPane withdrawDeposit = new GridPane();
         withdrawDeposit.setStyle("-fx-background-color: LIGHTSTEELBLUE");
         withdrawDeposit.add(withdrawRequest, 0, 2);
         withdrawDeposit.add(withdrawAmount, 1, 2);
@@ -127,7 +128,11 @@ public class BankAcountGUI extends Application {
     {
         if(runSafe)
         {
-            textWall.setText(textWall.getText() + "deposit \n");
+            String stringDeposit = new String(depositAmount.toString());
+            chosenDeposit = Double.parseDouble(stringDeposit);
+            balance += chosenDeposit;
+            textWall.setText(textWall.getText() + "\n " + balance);
+
         }
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
