@@ -28,6 +28,7 @@ public class BankAcountGUI extends Application {
     private TextField nameText;
     private double chosenDeposit;
     private int balance = 0;
+    private String stringDeposit;
     private double interest = 0.039;
     private TextField withdrawAmount = new TextField();
     private TextField depositAmount = new TextField();
@@ -131,7 +132,7 @@ public class BankAcountGUI extends Application {
     {
         if(runSafe)
         {
-            String stringDeposit = new String(depositAmount.toString());
+            stringDeposit = depositAmount.getText();
             chosenDeposit = Double.parseDouble(stringDeposit);
             balance += chosenDeposit;
             textWall.setText(textWall.getText() + "\n " + balance);
