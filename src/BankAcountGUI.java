@@ -28,6 +28,7 @@ public class BankAcountGUI extends Application {
     private TextField nameText;
     private int balance = 0;
     private double interest = 0.039;
+    TextField pinAccessor = new TextField();
     private String name;
     private String pin;
 
@@ -52,7 +53,7 @@ public class BankAcountGUI extends Application {
         Button clear = new Button("Clear");
         clear.setOnAction(this::clearPress);
 
-        TextField pinAccessor = new TextField();
+
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
         GridPane pinAccess = new GridPane();
@@ -76,6 +77,7 @@ public class BankAcountGUI extends Application {
         withdrawDeposit.add(depositAmount, 1,1);
         withdrawDeposit.add(pinAccessorLabel, 0,0);
         withdrawDeposit.add(pinAccessor, 1,0);
+        pinAccessor.setOnAction(this::pinAccessorPress);
 
         Label nameLabel = new Label("Account Name ");
         Label pinLabel = new Label("Pin ");
@@ -132,6 +134,15 @@ public class BankAcountGUI extends Application {
     private void clearPress(javafx.event.ActionEvent actionEvent )
     {
         textWall.setText("");
+    }
+
+    private void pinAccessorPress(javafx.event.ActionEvent actionEvent)
+    {
+        String pinAccessorText = pinAccessor.getText();
+        if(pinAccessorText.equals(pin))
+        {
+            textWall.setText(textWall.getText() + "");
+        }
     }
 
 }
