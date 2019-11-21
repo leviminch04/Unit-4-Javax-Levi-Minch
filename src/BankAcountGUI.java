@@ -31,6 +31,7 @@ public class BankAcountGUI extends Application {
     TextField pinAccessor = new TextField();
     private String name;
     private String pin;
+    private boolean runSafe = false;
 
     @Override
     public void start(Stage stage) {
@@ -107,18 +108,27 @@ public class BankAcountGUI extends Application {
 
     private void withdrawPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "withdraw \n");
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "withdraw \n");
+        }
 
     }
 
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "day \n");
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "day \n");
+        }
     }
 
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "deposit \n");
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "deposit \n");
+        }
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
     {
@@ -141,7 +151,11 @@ public class BankAcountGUI extends Application {
         String pinAccessorText = pinAccessor.getText();
         if(pinAccessorText.equals(pin))
         {
-            textWall.setText(textWall.getText() + "");
+            runSafe = true;
+        }
+        if(!pinAccessorText.equals(pin))
+        {
+            runSafe = false;
         }
     }
 
