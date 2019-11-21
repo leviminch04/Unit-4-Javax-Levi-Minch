@@ -9,6 +9,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+
 
 
 
@@ -19,7 +21,8 @@ public class BankAcountGUI extends Application {
     {
         launch(args);
     }
-    private Label textWall = new Label(" ");
+    private TextArea textWall = new TextArea();
+    //textWall.setEditable(false);
     private GridPane gridpane = new GridPane();
     private TextField pinText;
     private TextField nameText;
@@ -30,6 +33,7 @@ public class BankAcountGUI extends Application {
 
     @Override
     public void start(Stage stage) {
+        textWall.setEditable(false);
         Font font = new Font(12);
         nameText = new TextField();
         nameText.setOnAction(this::namePress);
@@ -95,23 +99,23 @@ public class BankAcountGUI extends Application {
 
     private void withdrawPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n withdraw");
+        textWall.setText(textWall.getText() + "withdraw \n");
 
     }
 
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n day");
+        textWall.setText(textWall.getText() + "day \n");
     }
 
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n deposit");
+        textWall.setText(textWall.getText() + "deposit \n");
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
     {
         name = nameText.getText();
-        textWall.setText(textWall.getText() + "\n" + name);
+        textWall.setText(textWall.getText() + name + "\n");
     }
 
     private void pinPress(javafx.event.ActionEvent actionEvent)
