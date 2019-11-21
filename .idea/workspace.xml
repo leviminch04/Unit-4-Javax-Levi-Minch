@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0e0c7cb3-0a76-4e67-9e55-1eb0bcb0fe25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="44adbe12-c819-4fbf-a523-83c3db6993a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Unit-4-Javafx-Levi-Minch/BankAcountGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Unit-4-Javafx-Levi-Minch/BankAcountGUI.class" afterDir="false" />
+>>>>>>> origin/master
       <change beforePath="$PROJECT_DIR$/src/BankAcountGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankAcountGUI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,21 +29,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="java" value="5" />
+=======
+          <entry key="java" value="2" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="5" />
+=======
+          <entry key="JAVA" value="2" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="java" value="893" />
+=======
+          <entry key="java" value="608" />
+          <entry key="txt" value="30" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="893" />
         </counts>
       </usages-collector>
@@ -61,6 +81,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="2" />
+=======
+          <entry key="JAVA" value="608" />
+          <entry key="PLAIN_TEXT" value="30" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
     </session>
@@ -70,6 +94,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BankAcountGUI.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1479">
               <caret line="117" column="22" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
               <folding>
@@ -82,12 +107,23 @@
                 <element signature="e#3203#3204#0" expanded="true" />
                 <element signature="e#3384#3385#0" expanded="true" />
                 <element signature="e#3427#3428#0" expanded="true" />
+=======
+            <state relative-caret-position="233">
+              <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+              <folding>
+                <element signature="method#namePress#0;class#BankAcountGUI#0" />
+                <element signature="e#3840#3841#0" expanded="true" />
+                <element signature="e#3879#3880#0" expanded="true" />
+                <element signature="e#4174#4175#0" expanded="true" />
+                <element signature="e#4210#4211#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/FahrenheitConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -110,6 +146,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="44" column="65" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="65" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/FahrenheitPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="45" column="61" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="61" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -125,7 +167,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
       <find>pinShit</find>
+=======
+      <find>GRE</find>
+      <find>if()</find>
+      <find>pin</find>
+>>>>>>> origin/master
     </findStrings>
     <replaceStrings>
       <replace>pinAccess</replace>
@@ -177,6 +225,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574185581494" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -294,6 +343,9 @@
         <option name="myId" value="SWITCHED" />
       </FILE-GROUP>
     </UpdatedFiles>
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574356943911" />
+>>>>>>> origin/master
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -472,6 +524,7 @@
       <option name="project" value="LOCAL" />
       <updated>1574185312128</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00014" summary="start of bankAcooutGio">
       <created>1574185588342</created>
       <option name="number" value="00014" />
@@ -480,6 +533,37 @@
       <updated>1574185588342</updated>
     </task>
     <option name="localTasksCounter" value="15" />
+=======
+    <task id="LOCAL-00001" summary=";EWFIwuhekfhgekhfliaysifo.hdm,">
+      <created>1574355778358</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574355778358</updated>
+    </task>
+    <task id="LOCAL-00002" summary=";EWFIwuhekfhgekhfliaysifo.hdm,">
+      <created>1574355921273</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574355921273</updated>
+    </task>
+    <task id="LOCAL-00003" summary=";EWFIwuhekfhgekhfliaysifo.hdm,">
+      <created>1574355970123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574355970123</updated>
+    </task>
+    <task id="LOCAL-00004" summary=";EWFIwuhekfhgekhfliaysifo.hdm,">
+      <created>1574356652788</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574356652788</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -547,6 +631,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
     <MESSAGE value="push" />
     <MESSAGE value="made and worked on CircleRadius" />
     <MESSAGE value="Finished CircleRadius besides one bug" />
@@ -584,11 +669,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+=======
+    <MESSAGE value=";EWFIwuhekfhgekhfliaysifo.hdm," />
+    <option name="LAST_COMMIT_MESSAGE" value=";EWFIwuhekfhgekhfliaysifo.hdm," />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/FahrenheitPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="45" column="61" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="61" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BankAcountGUI.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1479">
           <caret line="117" column="22" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
           <folding>
@@ -601,6 +697,16 @@
             <element signature="e#3203#3204#0" expanded="true" />
             <element signature="e#3384#3385#0" expanded="true" />
             <element signature="e#3427#3428#0" expanded="true" />
+=======
+        <state relative-caret-position="233">
+          <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+          <folding>
+            <element signature="method#namePress#0;class#BankAcountGUI#0" />
+            <element signature="e#3840#3841#0" expanded="true" />
+            <element signature="e#3879#3880#0" expanded="true" />
+            <element signature="e#4174#4175#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
