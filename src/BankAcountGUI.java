@@ -9,6 +9,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+
 
 
 
@@ -19,23 +21,21 @@ public class BankAcountGUI extends Application {
     {
         launch(args);
     }
-    private Label textWall = new Label(" ");
+    private TextArea textWall = new TextArea();
+    //textWall.setEditable(false);
     private GridPane gridpane = new GridPane();
     private TextField pinText;
     private TextField nameText;
-    private TextField withdrawAmount = new TextField();
-    private TextField depositAmount = new TextField();
-    private GridPane withdrawDeposit = new GridPane();
-    private double balence = 0;
-    private int days = 0;
+    private int balance = 0;
     private double interest = 0.039;
-    private double chosenDeposit;
+    TextField pinAccessor = new TextField();
     private String name;
     private String pin;
-    private String saftyPin;
+    private boolean runSafe = false;
 
     @Override
     public void start(Stage stage) {
+        textWall.setEditable(false);
         Font font = new Font(12);
         nameText = new TextField();
         nameText.setOnAction(this::namePress);
@@ -54,14 +54,12 @@ public class BankAcountGUI extends Application {
         Button clear = new Button("Clear");
         clear.setOnAction(this::clearPress);
 
-        TextField pinAccessor = new TextField();
+
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
         GridPane pinAccess = new GridPane();
         pinAccess.add(pinAccessorLabel, 0 ,0);
         pinAccess.add(pinAccessor, 1, 0);
-        pinAccessor.setOnAction(this::pinAccessorPress);
-
 
         FlowPane buttons = new FlowPane(deposit, day, withdraw, clear);
         buttons.setAlignment(Pos.TOP_RIGHT);
@@ -70,6 +68,9 @@ public class BankAcountGUI extends Application {
 
         Label withdrawRequest = new Label("How much do you want to withdraw? ");
         Label depositRequest = new Label("How much do you want to deposit? ");
+        TextField withdrawAmount = new TextField();
+        TextField depositAmount = new TextField();
+        GridPane withdrawDeposit = new GridPane();
         withdrawDeposit.setStyle("-fx-background-color: LIGHTSTEELBLUE");
         withdrawDeposit.add(withdrawRequest, 0, 2);
         withdrawDeposit.add(withdrawAmount, 1, 2);
@@ -77,6 +78,7 @@ public class BankAcountGUI extends Application {
         withdrawDeposit.add(depositAmount, 1,1);
         withdrawDeposit.add(pinAccessorLabel, 0,0);
         withdrawDeposit.add(pinAccessor, 1,0);
+        pinAccessor.setOnAction(this::pinAccessorPress);
 
         Label nameLabel = new Label("Account Name ");
         Label pinLabel = new Label("Pin ");
@@ -106,42 +108,55 @@ public class BankAcountGUI extends Application {
 
     private void withdrawPress(javafx.event.ActionEvent actionEvent)
     {
-        textWall.setText(textWall.getText() + "\n withdraw");
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "withdraw \n");
+        }
 
     }
 
     private void daysPress(javafx.event.ActionEvent actionEvent)
     {
-        //  if (pin)
-        days++;
-        balence = (balence)*(interest)*(days);
-        textWall.setText(textWall.getText() + "\n day");
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "day \n");
+        }
     }
 
     private void depositPress(javafx.event.ActionEvent actionEvent)
     {
-        String stringDeposit = new String(depositAmount.toString());
-        chosenDeposit = Double.parseDouble(stringDeposit);
-        balence += chosenDeposit;
-        textWall.setText(textWall.getText() + "\n " + balence);
+        if(runSafe)
+        {
+            textWall.setText(textWall.getText() + "deposit \n");
+        }
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
     {
         name = nameText.getText();
+        textWall.setText(textWall.getText() + name + "\n");
     }
 
     private void pinPress(javafx.event.ActionEvent actionEvent)
     {
         pin = pinText.getText();
     }
-    private void pinAccessorPress(javafx.event.ActionEvent actionEvent)
-    {
-        //   saftyPin = pinAccessor.getText();
-    }
 
     private void clearPress(javafx.event.ActionEvent actionEvent )
     {
         textWall.setText("");
+    }
+
+    private void pinAccessorPress(javafx.event.ActionEvent actionEvent)
+    {
+        String pinAccessorText = pinAccessor.getText();
+        if(pinAccessorText.equals(pin))
+        {
+            runSafe = true;
+        }
+        if(!pinAccessorText.equals(pin))
+        {
+            runSafe = false;
+        }
     }
 
 }
