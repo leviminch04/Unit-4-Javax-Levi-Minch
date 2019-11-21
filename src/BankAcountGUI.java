@@ -49,6 +49,9 @@ public class BankAcountGUI extends Application {
         Button withdraw = new Button("withdraw");
         withdraw.setOnAction(this::withdrawPress);
 
+        Button clear = new Button("Clear");
+        clear.setOnAction(this::);
+
         TextField pinAccessor = new TextField();
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
@@ -56,27 +59,30 @@ public class BankAcountGUI extends Application {
         pinAccess.add(pinAccessorLabel, 0 ,0);
         pinAccess.add(pinAccessor, 1, 0);
 
-        FlowPane buttons = new FlowPane(deposit, day, withdraw, pinAccess);
+        FlowPane buttons = new FlowPane(deposit, day, withdraw);
         buttons.setAlignment(Pos.TOP_RIGHT);
         buttons.setHgap(10);
-        buttons.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        buttons.setStyle("-fx-background-color: DIMGREY");
 
         Label withdrawRequest = new Label("How much do you want to withdraw? ");
         Label depositRequest = new Label("How much do you want to deposit? ");
         TextField withdrawAmount = new TextField();
         TextField depositAmount = new TextField();
         GridPane withdrawDeposit = new GridPane();
-        withdrawDeposit.add(withdrawRequest, 0, 1);
-        withdrawDeposit.add(withdrawAmount, 1, 1);
-        withdrawDeposit.add(depositRequest, 0, 0);
-        withdrawDeposit.add(depositAmount, 1,0);
+        withdrawDeposit.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        withdrawDeposit.add(withdrawRequest, 0, 2);
+        withdrawDeposit.add(withdrawAmount, 1, 2);
+        withdrawDeposit.add(depositRequest, 0, 1);
+        withdrawDeposit.add(depositAmount, 1,1);
+        withdrawDeposit.add(pinAccessorLabel, 0,0);
+        withdrawDeposit.add(pinAccessor, 1,0);
 
         Label nameLabel = new Label("Account Name ");
         Label pinLabel = new Label("Pin ");
 
         GridPane createAccount = new GridPane();
         createAccount.setAlignment(Pos.TOP_LEFT);
-        createAccount.setStyle("-fx-background-color: LIGHTSTEELBLUE");
+        createAccount.setStyle("-fx-background-color: DIMGREY");
         createAccount.add(nameLabel, 0, 0);
         createAccount.add(pinLabel, 0, 1);
         createAccount.add(nameText, 1, 0);
@@ -89,7 +95,7 @@ public class BankAcountGUI extends Application {
         gridpane.add(withdrawDeposit, 1, 1);
 
 
-        Scene scene = new Scene(gridpane, 650, 500);
+        Scene scene = new Scene(gridpane, 780, 200);
         stage.setTitle("ATM");
         stage.setScene(scene);
         stage.show();
@@ -122,5 +128,7 @@ public class BankAcountGUI extends Application {
     {
         pin = pinText.getText();
     }
+
+    private void(ja )
 
 }
