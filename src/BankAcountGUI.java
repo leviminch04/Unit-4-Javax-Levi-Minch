@@ -1,4 +1,5 @@
 
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -27,7 +28,7 @@ public class BankAcountGUI extends Application {
     private TextField pinText;
     private TextField nameText;
     private double chosenDeposit;
-    private int balance = 0;
+    private double balance = 0;
     private String stringDeposit;
     private double interest = 0.039;
     private TextField withdrawAmount = new TextField();
@@ -37,6 +38,7 @@ public class BankAcountGUI extends Application {
     private String name;
     private String pin;
     private boolean runSafe = false;
+    private int day;
 
     @Override
     public void start(Stage stage) {
@@ -115,7 +117,9 @@ public class BankAcountGUI extends Application {
     {
         if(runSafe)
         {
-            textWall.setText(textWall.getText() + "withdraw \n");
+            String stringWithdraw = withdrawAmount.getText();
+            double chosenWithdraw = Double.parseDouble(stringWithdraw);
+            balance -= chosenWithdraw;
         }
 
     }
@@ -124,7 +128,8 @@ public class BankAcountGUI extends Application {
     {
         if(runSafe)
         {
-            textWall.setText(textWall.getText() + "day \n");
+            day++;
+            balance = balance + (balance * interest * day);
         }
     }
 
@@ -135,7 +140,6 @@ public class BankAcountGUI extends Application {
             stringDeposit = depositAmount.getText();
             chosenDeposit = Double.parseDouble(stringDeposit);
             balance += chosenDeposit;
-            textWall.setText(textWall.getText() + "\n " + balance);
         }
     }
     private void namePress(javafx.event.ActionEvent actionEvent)
@@ -171,7 +175,13 @@ public class BankAcountGUI extends Application {
     {
         if(runSafe)
         {
-            textWall.setText(textWall.getText() + name + "\n" + balance + "\n");
+            textWall.setText(textWall.getText() + "Account Name: " + name + "\n" +
+                    "Pin: " + pin + "\n" + "Balence:  " + balance + "\n");
         }
+
+
     }
 }
+
+
+
