@@ -1,5 +1,3 @@
-
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -11,10 +9,6 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
-
-
-
-
 
 
 public class BankAcountGUI extends Application {
@@ -63,7 +57,6 @@ public class BankAcountGUI extends Application {
 
         Button info = new Button("info");
         info.setOnAction(this::infoPress);
-
 
         Label pinAccessorLabel = new Label("Type in Pin To Access Your Account");
 
@@ -181,6 +174,3 @@ public class BankAcountGUI extends Application {
 
     }
 }
-
-
-
